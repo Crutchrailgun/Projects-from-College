@@ -1,0 +1,20 @@
+LCSEE	Student Name
+CS 560/460: Big Data Engineering Assignment 1 (Section 1: Search in Big Data) Released:	Monday, Sept 7, 2026.
+Due:	Tuesday, Sept 21, 2026, 11:59pm (via eCampus).
+Combined your solution to the problems into one .pdf file. Then submit the .pdf file, and the codes developed via eCampus. For this assignment, we won’t accept hand-written submissions in class.
+Q1: Let T be the database (the big data) of length n, and P the pattern of length m. In class we described two algorithms for finding the pattern P in the big data T, namely, the naïve pattern matching algorithm, and the hash-based pattern matching. The naïve algorithm does not require any preprocessing, but the hash-based method does.
+Q1A: We provided a pseudo code for the exact steps of the naïve pattern matching algorithm. Provide a similar pseudo code for the hash-based method, or a description of the steps needed.
+
+
+Q1B:
+(i) Using your favorite programming environment, implement the two algorithms.
+(ii) Based on your implementation compare the performance of the two pattern matching methods, in terms of time required. Using a table, show the number of occurrences and the time needed for 7 different patterns using 2 text files: T1= quiz1.txt; T2= world192.txt (both available at eCampus). For each pattern, the time may be too small. You can record total time for many runs, e.g. 1000 runs. Also, remember to indicate the number of runs.
+T1=quiz1.txtT2= world192.txtNaïve MethodHash-BasedNaïve MethodHash-BasedPattern# occ.Time# occ.Time# occ.Time# occ.TimeP1= “the”P2 = “accept”P3 = “submission”P4 = “papers”P5 = “quest”P6= “zipper”P7= “west”(iii) Briefly, comment on your key observations from the results (at least 5 key observations). No more than 1 page.
+
+
+Q1C:
+Repeat problem Q1B (i, ii, iii), but using your favorite AI tool or AI chatbot (such as ChatGPT, Gemini, Co-Pilot, Gronk, Claude, etc.) to code/implement your algorithms. Clearly indicate which AI tool that you used in your solution, and why. Report your results for Q1C (i, ii, iii), similar to Q1B.
+
+
+Q1D:
+Briefly, compare your results for Q1B and Q1C, and comment on your key observations (at least 5 key observations). No more than 1 page.
