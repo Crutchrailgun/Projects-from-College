@@ -10,7 +10,7 @@ def native_string_search(file, pattern):
     with open(file, 'r') as f:
         content = f.read()
         if pattern in content:
-            count+= 1
+            count += content.count(pattern)
 
 
     return count
