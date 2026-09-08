@@ -14,3 +14,7 @@ def native_string_search(file, pattern):
 
 
     return count
+
+
+if __name__ == "__main__":
+    print(native_string_search(None, None))
