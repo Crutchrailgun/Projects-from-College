@@ -15,17 +15,21 @@ def native_string_search(file, pattern):
 
         n = len(content)
         m = len(pattern)
+        found_indices = []
 
         for i in range(n - m + 1):
-            if content[i:i + m] == pattern:
+            for j in range(m):
+                runs += 1
+                if content[i + j] != pattern[j]:
+                    break
+            else:
                 count += 1
-            runs += 1
-
+                found_indices.append(i)
 
         print(f"Number of runs: {runs}")      
             
         
-    return count
+    return len(found_indices)
 
 
 
