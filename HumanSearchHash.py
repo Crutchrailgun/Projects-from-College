@@ -16,7 +16,8 @@ def rabin_karp_search(file, pattern, q):
     runs = 0
     d = 256  # number of characters in the input alphabet
     m = len(pattern)
-    n = len(get_file_content(file))
+    file_text = get_file_content(file)
+    n = len(file_text)
     p = 0  # hash value for pattern
     t = 0  # hash value for text
     i = 0
@@ -28,21 +29,21 @@ def rabin_karp_search(file, pattern, q):
     # Calculate the hash value of pattern and first window of text
     for i in range(m):
         p = (d * p + ord(pattern[i])) % q
-        t = (d * t + ord(get_file_content(file)[i])) % q
+        t = (d * t + ord(file_text[i])) % q
 
     # Slide the pattern over text one by one
     for i in range(n - m + 1):
         runs += 1
         if p == t:
             for j in range(m):
-                if get_file_content(file)[i + j] != pattern[j]:
+                if file_text[i + j] != pattern[j]:
                     break
             j += 1
             if j == m:
                 count += 1
     # Update hash value for next window of text: Remove leading digit, add trailing digit
         if i < n - m:
-            t = (d * (t - ord(get_file_content(file)[i]) * h) + ord(get_file_content(file)[i + m])) % q
+            t = (d * (t - ord(file_text[i]) * h) + ord(file_text[i + m])) % q
             if t < 0:
                 t = t + q
 
