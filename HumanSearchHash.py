@@ -1,5 +1,3 @@
-import time
-from collections import defaultdict, Counter
 # grabbing the content of the file
 def get_file_content(file):
     with open(file, 'r') as f:
