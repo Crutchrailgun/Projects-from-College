@@ -1,6 +1,3 @@
-from matplotlib import text
-
-
 def native_string_search(file, pattern):
 
     file = input("Enter the file name: ")
@@ -35,5 +32,4 @@ def native_string_search(file, pattern):
 
 
 if __name__ == "__main__":
-    print(native_string_search(None, None))
-    
+    native_string_search(None, None)

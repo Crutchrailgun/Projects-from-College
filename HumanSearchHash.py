@@ -1,4 +1,3 @@
-from matplotlib import text
 import time
 from collections import defaultdict, Counter
 # grabbing the content of the file
