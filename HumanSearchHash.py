@@ -1,3 +1,6 @@
+#author: Josiah Fout
+# 9/07/26
+
 # grabbing the content of the file
 def get_file_content(file):
     with open(file, 'r') as f:
@@ -20,15 +23,15 @@ def rabin_karp_search(file, pattern, q):
     i = 0
     j = 0
     h = 1
-    # The value of h would be "pow(d, m-1)%q"
+    #the value of h would be "pow(d, m-1)%q"
     for i in range(m-1):
         h = (h * d) % q
-    # Calculate the hash value of pattern and first window of text
+    #calculate the hash value of pattern and first window of text
     for i in range(m):
         p = (d * p + ord(pattern[i])) % q
         t = (d * t + ord(file_text[i])) % q
 
-    # Slide the pattern over text one by one
+    #slide the pattern over text one by one
     for i in range(n - m + 1):
         runs += 1
         if p == t:
@@ -38,7 +41,7 @@ def rabin_karp_search(file, pattern, q):
             j += 1
             if j == m:
                 count += 1
-    # Update hash value for next window of text: Remove leading digit, add trailing digit
+    #update hash value for next window of text
         if i < n - m:
             t = (d * (t - ord(file_text[i]) * h) + ord(file_text[i + m])) % q
             if t < 0:
