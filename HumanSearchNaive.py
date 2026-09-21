@@ -12,9 +12,11 @@ def native_string_search(file, pattern):
 
         n = len(content)
         m = len(pattern)
+
         found_indices = []
 
         for i in range(n - m + 1):
+
             for j in range(m):
                 runs += 1
                 if content[i + j] != pattern[j]:
