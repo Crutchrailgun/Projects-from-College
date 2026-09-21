@@ -1,3 +1,6 @@
+#Author: Josiah Fout
+#Date: 9/08/26
+
 def native_string_search(file, pattern):
 
     file = input("Enter the file name: ")
